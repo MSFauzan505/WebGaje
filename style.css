@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --white-parent: #F2EFE5;
+  --white-child: #E3E1D9;
+  --grey-child: #C7C8CC;
+  --grey-parent: #B4B4B8;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+} 
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+*,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body {
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  background: linear-gradient(180deg, rgba(180, 180, 184, 1) 0%, rgba(227, 225, 217, 1) 88%, rgba(242, 239, 229, 1) 100%);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav-container {
+  box-shadow: 0 0 10px var(--grey-child);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  background: var(--grey-parent);
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav-container .logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nav-container nav ul {
+  display: flex;
+  list-style: none;
+  width: 500px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-container nav ul li {
+  margin: 0 0.5rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.2rem 0;
+  transition: 0.3s;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+}
+
+.nav-container nav ul li:hover {
+  background: var(--white-child);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset, -3px -3px 10px var(--white-child) inset;
+}
+
+.login-btn {
+  border: 0.5px solid black;
+}
+
+button {
+  padding: 0.2rem 1rem;
+  border: 1px solid black;
+  font-size: 1rem;
+  background: var(--white-child);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-3px) translateX(-3px) scale(1.02);
+  background: var(--white-parent);
+  color: black;
+}
+
+button:active {
+  background: var(--grey-child);
+  color: var(--white-parent);
+}
+
+/* content */
+.content {
+
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+}
+
+.content p{
+  text-align: center;
+
+}
+
+.content .images-content {
+  width: 70%;
+  height: 60vh;
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+}
+
+
+.content .images-content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
+
+.content .images-content .image {
+  width: 25%;
+}
+
+.content .images-content .image img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.btn-content a {
+  border: 1px solid black;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: var(--white-child);
+  padding: 0.2rem 3rem;
+  font-size: 1.2rem;
+  transition: 0.1s ease-in-out;
+  border: 1px solid black;
+}
+
+button:hover {
+  transform: translateY(-3px) translateX(-3px) scale(1.02);
+  background: var(--white-parent);
+  color: black;
+}
+
+/* content feature */
+.content-feature {
+  padding: 1.2rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content-feature-right {
+  padding: 1.5rem;
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-feature-right h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.content-feature-right p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.content-feature-left {
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-feature-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-more {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-more a {
+  border: 1px solid black;
+}
+/* content card */
+.content-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 10px;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #ddd;
+  
+  overflow-y: hidden;
+}
+
+
+.content-card a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  background: var(--grey-child);
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+  border-radius: 20px;
+  transition: 0.1s ease-in-out;
+}
+
+.content-card a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.content-card a .card-header{
+  background-image: url(./image/wp12745061-furina-wallpapers.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  flex: 2;
+  width: 100%;
+  height: 100vh;
+}
+
+.content-card a .card-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+  flex: 1;
+}
+
+.services{
+  margin: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--grey-parent);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--grey-child);
+
+}
+.services h3{
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.services-icons{
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.services-icons .icon{
+  flex-direction: column;
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+.services-icons .icon a{
+  text-decoration: none;
+  color: black;
+
+}
+.services-icons .icon svg{
+  transition: 0.1s ease-in-out;
+}
+.services-icons .icon svg:hover{
+  transform: translateY(-10px);
+}
+
